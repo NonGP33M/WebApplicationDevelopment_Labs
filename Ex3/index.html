@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="#">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <title>Document</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+</head>
+
+<style>
+    #navBrand {
+        font-weight: bolder;
+        text-transform: uppercase;
+        font-size: 2vw;
+    }
+
+    #navbarItems {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 5%;
+        margin-right: 5%;
+        font-size: 1.5vw;
+    }
+
+    .dropdown-menu {
+        left: -200px;
+    }
+
+    .responsive {
+        width: 100%;
+        height: auto;
+    }
+
+    .banner {
+        position: relative;
+    }
+
+    #bannerText {
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 10vw;
+    }
+
+    .content {
+        padding-top: 4%;
+        padding-bottom: 4%;
+    }
+
+    #goatPic {
+        filter: brightness(75%);
+    }
+
+    .contHeader {
+        margin-left: -3%;
+        font-size: 3vw;
+        font-weight: bold;
+    }
+
+    h1.header {
+        text-align: center;
+        padding-top: 4%;
+        padding-bottom: 3%;
+        font-size: 100%;
+    }
+
+    p {
+        padding-left: 15%;
+        padding-right: 15%;
+        font-size: 2vw;
+    }
+
+    p.indent {
+        text-indent: 50px;
+    }
+
+    body {
+        padding-top: 2%;
+        position: absolute;
+        background-color: beige;
+        font-family: 'Oswald', sans-serif;
+    }
+
+    .row {
+        margin-left: 10%;
+        margin-right: 10%;
+        display: flex;
+        justify-content: center;
+    }
+
+
+    .card {
+        height: 100% !important;
+    }
+
+    .cardContent {
+        margin-left: -5%;
+        margin-right: -5%;
+        text-indent: 40px;
+        font-size: 2vw;
+    }
+
+    .cardHeader {
+        margin-bottom: 2%;
+        padding-top: 2%;
+        font-weight: bold;
+        font-size: 3vw;
+    }
+</style>
+
+<nav class="navbar bg-body-tertiary fixed-top">
+    <div class="container-fluid" id="navbarItems">
+        <a class="navbar-brand" href="#" id="navBrand">Goaterest</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Goaterest</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#cont1">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Topics
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#cont2">Etymology</a></li>
+                            <li><a class="dropdown-item" href="#cont3">History</a></li>
+                            <li><a class="dropdown-item" href="#cont4">Anatomy and health</a></li>
+                            <li><a class="dropdown-item" href="#cont5">Diet</a></li>
+                            <li><a class="dropdown-item" href="#cont6">Life expectancy</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="banner">
+    <img src="https://images5.alphacoders.com/402/402847.jpg" alt="GOAT" class="responsive" id="goatPic">
+    <p id="bannerText">GOAT</p>
+</div>
+<div class="content" id="cont1">
+    <p class="indent"> The goat or domestic goat (Capra hircus) is a domesticated species of goat-antelope typically
+        kept as livestock. It was domesticated from the wild goat (C. aegagrus) of Southwest Asia and Eastern
+        Europe. The goat is a member of the animal family Bovidae and the tribe Caprini, meaning it is closely
+        related to the sheep. There are over 300 distinct breeds of goat. It is one of the oldest domesticated
+        species of animal, according to archaeological evidence that its earliest domestication occurred in Iran at
+        10,000 calibrated calendar years ago.</p>
+
+    <p>Goats have been used for milk, meat, fur, and skins across much of the world. Milk from
+        goats is often turned into goat cheese.</p>
+
+    <p>Female goats are referred to as does or nannies, intact males are called bucks or billies, and juvenile goats
+        of both sexes are called kids. Castrated males are called wethers. While the words hircine and caprine both
+        refer to anything having a goat-like quality, hircine is used most often to emphasize the distinct smell of
+        domestic goats.</p>
+
+    <p>In 2011, there were more than 924 million goats living in the world, according to the UN Food and Agriculture
+        Organization.</p>
+</div>
+
+<div class="content" id="cont2">
+    <p class="contHeader">Etymology</p>
+    <p class="indent">The Modern English word goat comes from Old English gāt "she-goat, goat in general", which in
+        turn derives from Proto-Germanic *gaitaz (cf. Norwegian/Icelandic geit, German Geiß, and Gothic gaits),
+        ultimately from Proto-Indo-European *ǵʰaidos meaning "young goat" (cf. Latin haedus "kid"). To refer to
+        the male, Old English used bucca (giving modern buck) until ousted by hegote, hegoote in the late 12th
+        century. Nanny goat (females) originated in the 18th century, and billy goat (for males) originated in the
+        19th century.
+    </p>
+</div>
+
+<div class="content" id="cont3">
+    <p class="contHeader">History</p>
+    <p class="indent">Goats are among the earliest animals domesticated by humans. The most recent genetic
+        analysis confirms the archaeological evidence that the wild bezoar ibex of the Zagros Mountains is the
+        likely original ancestor of probably all domestic goats today.</p>
+    <p> Neolithic farmers began to herd wild goats primarily for easy access to milk and meat, as well as to their
+        dung, which was used as fuel; and their bones, hair, and sinew were used for clothing, building, and
+        tools. The earliest remnants of domesticated goats dating 10,000 years Before Present are found in Ganj
+        Dareh in Iran. Goat remains have been found at archaeological sites in Jericho, Choga Mami, Djeitun,
+        and Çayönü, dating the domestication of goats in Western Asia at between 8,000 and 9,000 years ago.</p>
+    <p>studies of DNA evidence suggests 10,000 years ago as the domestication date.</p>
+    <p> Historically, goat hide has been used for water and wine bottles in both traveling and transporting wine for
+        sale. It has also been used to produce parchment.</p>
+</div>
+
+<div class="content" id="cont4">
+    <p class="contHeader">Anatomy and health</p>
+    <p class="indent">Each recognized breed of goat has specific weight ranges, which vary from over 140 kg (300 lb)
+        for bucks of larger breeds such as the Boer, to 20 to 27 kg (45 to 60 lb) for smaller goat does. Within each
+        breed, different strains or bloodlines may have different recognized sizes. At the bottom of the size range
+        are miniature breeds such as the African Pygmy, which stand 41 to 58 cm (16 to 23 in) at the shoulder as
+        adults.</p>
+</div>
+<div class="row" id="row1">
+    <div class="col-12 col-md-12 col-lg-6 pb-3 pb-md-3">
+        <div class="card">
+            <center>
+                <p class="cardHeader">Horns</p>
+            </center>
+            <div style="margin: 5%">
+                <img src="https://www.thehappychickencoop.com/wp-content/uploads/2022/10/goat-breeds-with-horns.jpg"
+                    class="responsive" style="padding-bottom: 3%;">
+            </div>
+            <p class="cardContent">Most goats naturally have two horns, of various shapes and sizes depending on
+                the breed. There
+                have been incidents of polycerate goats (having as many as eight horns), although this is a
+                genetic rarity thought to be inherited. Unlike cattle, goats have not been successfully bred to
+                be reliably polled, as the genes determining sex and those determining horns are closely linked.
+                Breeding together two genetically polled goats results in a high number of intersex individuals
+                among the offspring, which are typically sterile. Their horns are made of living bone surrounded
+                by keratin and other proteins, and are used for defense, dominance, and territoriality.</p>
+        </div>
+    </div>
+    <div class="col-12 col-md-12 col-lg-6 pb-3 pb-md-3">
+        <div class="card">
+            <center>
+                <p class="cardHeader">Digestion and lactation</p>
+            </center>
+            <div style="margin: 5%">
+                <img src="https://o.quizlet.com/J33zMRKK6.OgYmfpwtchhA_b.jpg" class="responsive"
+                    style="padding-bottom: 3%;">
+            </div>
+            <p class="cardContent">Goats are ruminants. They have a four-chambered stomach consisting of the
+                rumen,
+                the reticulum, the omasum, and the abomasum. As with other mammal ruminants, they are even-toed
+                ungulates. The females have an udder consisting of two teats, in contrast to cattle, which have
+                four
+                teats. An exception to this is the Boer goat, which sometimes may have up to eight teats.</p>
+        </div>
+    </div>
+</div>
+
+<div class="row" id="row2">
+    <div class="col-12 col-md-12 col-lg-6 pb-3 pb-md-3">
+        <div class="card">
+            <center>
+                <p class="cardHeader">Eyes</p>
+            </center>
+            <div style="margin: 5%">
+                <img src="https://i.pinimg.com/originals/f9/60/d1/f960d1c7150d7f69ee88355c16bc2bcd.jpg"
+                    class="responsive" style="padding-bottom: 3%;">
+            </div>
+            <p class="cardContent">Goats have horizontal, slit-shaped pupils. Because goats' irises are usually
+                pale, their contrasting pupils are much more noticeable than in animals such as cattle, deer,
+                most
+                horses, and many sheep, whose similarly horizontal pupils blend into a dark iris and sclera.</p>
+        </div>
+    </div>
+    <div class="col-12 col-md-12 col-lg-6 pb-3 pb-md-3">
+        <div class="card">
+            <center>
+                <p class="cardHeader">Beards</p>
+            </center>
+            <div style="margin: 5%">
+                <img src="https://modernfarmer.com/wp-content/uploads/2017/06/goatbeard5.jpg" class="responsive"
+                    style="padding-bottom: 3%;">
+            </div>
+            <p class="cardContent">Both male and female goats may have beards, and many types of goat (most
+                commonly
+                dairy goats, dairy-cross Boers, and pygmy goats) may have wattles, one dangling from each side
+                of
+                the neck.</p>
+        </div>
+    </div>
+</div>
+
+<div class="row" id="row3">
+    <div class="col-12 col-md-12 col-lg-6 pb-3 pb-md-3">
+        <div class="card">
+            <center>
+                <p class="cardHeader">Tan</p>
+            </center>
+            <div style="margin: 5%">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Domestic_goat_May_2006.jpg/1280px-Domestic_goat_May_2006.jpg"
+                    class="responsive" style="padding-bottom: 3%;">
+            </div>
+            <p class="cardContent">Goats expressing the tan pattern have coats pigmented completely with
+                pheomelanin
+                (tan/brown pigment). The allele which codes for this pattern is located at the agouti locus of
+                the
+                goat genome. It is completely dominant to all other alleles at this locus. There are multiple
+                modifier genes which control how much tan pigment is actually expressed, so a tan-patterned goat
+                can
+                have a coat ranging from pure white to deep red.</p>
+        </div>
+    </div>
+</div>
+
+<div class="content" id="cont5">
+    <p class="contHeader">Diet</p>
+    <p class="indent">Goats are reputed to be willing to eat almost anything, including tin cans and cardboard
+        boxes. While goats will not actually eat inedible material, they are browsing animals, not grazers like
+        cattle and sheep, and (coupled with their highly curious nature) will chew on and taste just about anything
+        remotely resembling plant matter to decide whether it is good to eat, including cardboard, clothing and
+        paper (such as labels from tin cans).</p>
+    <p>Aside from sampling many things, goats are quite particular in what they actually consume,
+        preferring to browse on the tips of woody shrubs and trees, as well as the occasional broad-leaved plant.
+        However, it can fairly be said that their plant diet is extremely varied, and includes some species which
+        are otherwise toxic. They will seldom consume soiled food or contaminated water unless facing
+        starvation. This is one reason goat-rearing is most often free-ranging, since stall-fed goat-rearing
+        involves extensive upkeep and is seldom commercially viable.</p>
+    <p>Goats prefer to browse on vines, such as kudzu, on shrubbery and on weeds, more like deer than
+        sheep, preferring them to grasses. Nightshade is poisonous; wilted fruit tree leaves can also kill goats.
+        Silage (fermented corn stalks) and haylage (fermented grass hay) can be used if consumed immediately after
+        opening – goats are particularly sensitive to Listeria bacteria that can grow in fermented feeds. Alfalfa, a
+        high-protein plant, is widely fed as hay; fescue is the least palatable and least nutritious hay. Mold in a
+        goat's feed can make it sick and possibly kill it. In various places in China, goats are used in the
+        production of tea. Goats are released onto the tea terraces where they avoid consuming the green tea leaves
+        (which contain bitter tasting substances), but instead eat the weeds. The goats' droppings fertilise the tea
+        plants.</p>
+    <p>The digestive physiology of a very young kid (like the young of other ruminants) is
+        essentially the same as that of a monogastric animal. Milk digestion begins in the abomasum, the milk having
+        bypassed the rumen via closure of the reticuloesophageal groove during suckling. At birth, the rumen is
+        undeveloped, but as the kid begins to consume solid feed, the rumen soon increases in size and in its
+        capacity to absorb nutrients.</p>
+    <p>The adult size of a particular goat is a product of its breed (genetic potential) and its diet
+        while growing (nutritional potential). As with all livestock, increased protein diets (10 to 14%) and
+        sufficient calories during the prepuberty period yield higher growth rates and larger eventual size than
+        lower protein rates and limited calories. Large-framed goats, with a greater skeletal size, reach mature
+        weight at a later age (36 to 42 months) than small-framed goats (18 to 24 months) if both are fed to their
+        full potential. Large-framed goats need more calories than small-framed goats for maintenance of daily
+        functions.</p>
+</div>
+
+<div class="content" id="cont6">
+    <p class="contHeader">Life expectancy</p>
+    <p class="indent">Life expectancy for goats is between 15 and 18 years. An instance of a goat reaching the
+        age of 24 has been reported.</p>
+    <p>Several factors can reduce this average expectancy; problems during kidding can lower a doe's expected life
+        span to 10 or 11, and stresses of going into rut can lower a buck's expected life span to eight to 10 years.
+    </p>
+</div>
+</body>
+
+</html>
