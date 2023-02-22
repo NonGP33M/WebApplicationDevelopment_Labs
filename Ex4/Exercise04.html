@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+
+<head></head>
+
+<body>
+    <div id="maincontainer"></div>
+    <script>
+        const id = "maincontainer";
+        const all = document.getElementById(id);
+
+
+        //container 1
+        const container1 = document.createElement("div");
+        const header1 = document.createElement("h2");
+        const header1Text = document.createTextNode("Exercise 04: Javascript&DOM");
+        header1.appendChild(header1Text);
+
+        container1.appendChild(header1);
+        //container 1 - END
+
+        //container 2
+        const container2 = document.createElement("div");
+        const button = document.createElement("button");
+        const buttonText = document.createTextNode("Click me to display Date and Time.");
+        button.appendChild(buttonText);
+
+        let worker;
+        let dateActive = false;
+        let countColor = 0;
+        let dateColor = ["black", "MidnightBlue", "maroon", "purple", "Teal", "olive"];
+        button.id = "date";
+        button.onclick = () => {
+            webWorker();
+        };
+        document.getElementById(id).appendChild(button);
+
+        webWorker = () => {
+            dateActive = !dateActive
+            const buttonAlter = document.getElementById("date");
+            if (dateActive) {
+                worker = new Worker("worker.js");
+                worker.onmessage = (event) => {
+                    buttonAlter.style.position = "fixed";
+                    buttonAlter.style.top = 0;
+                    buttonAlter.style.right = 0;
+                    buttonAlter.style.backgroundColor = dateColor[countColor++];
+                    buttonAlter.style.color = "white";
+                    buttonAlter.style.border = "solid black 2px"
+                    buttonAlter.innerText = event.data;
+                    if (countColor >= 6) {
+                        countColor = 0;
+                    }
+                };
+            } else {
+                worker.terminate();
+                buttonAlter.style.position = null;
+            }
+        };
+
+
+        container2.appendChild(button);
+        //container 2 - END
+
+        //container 3
+        const container3 = document.createElement("div");
+        const subContainer = document.createElement("div");
+        const personalInfo = document.createElement("p");
+        const personalInfoText = document.createTextNode("Personal Info");
+        personalInfo.appendChild(personalInfoText);
+
+        let personalInfoToggle = false;
+        personalInfo.id = "infoTag";
+        const style = document.createElement("style");
+
+        style.appendChild(document.createTextNode("#infoTag{color:plum; width:fit-content; text-decoration: underline;} #infoTag:hover{color:blue; background-color:yellow }"));
+        personalInfo.appendChild(style);
+
+        personalInfo.onclick = () => {
+            personalInfoToggle = !personalInfoToggle
+            if (!personalInfoToggle) {
+                subContainer.style.display = "None";
+            }
+            else {
+                subContainer.style.display = "Block";
+            }
+        }
+
+        const name = document.createElement("li");
+        const subject = document.createElement("li");
+        const semester = document.createElement("li");
+        const nameText = document.createTextNode("Phumrapee Sinkeeree, ID: 64010683");
+        const subjectText = document.createTextNode("Subject: WEB APPLICATION DEVELOPMENT");
+        const semesterText = document.createTextNode("Semester: 2");
+        name.appendChild(nameText);
+        subject.appendChild(subjectText);
+        semester.appendChild(semesterText);
+
+        subContainer.appendChild(name);
+        subContainer.appendChild(subject);
+        subContainer.appendChild(semester);
+
+        container3.appendChild(personalInfo);
+        container3.appendChild(subContainer);
+
+
+        //container 3 - END
+
+        //container 4
+        const container4 = document.createElement("div");
+        const header2 = document.createElement("h1");
+        const header2Text = document.createTextNode("Snapshots");
+        const subContainer1 = document.createElement("div");
+        header2.appendChild(header2Text);
+
+        const li1 = document.createElement("li");
+        const li2 = document.createElement("li");
+        const li3 = document.createElement("li");
+        const li4 = document.createElement("li");
+        const li1Text = document.createTextNode("Fireworks");
+        const li2Text = document.createTextNode("Crest");
+        const li3Text = document.createTextNode("Action");
+        const li4Text = document.createTextNode("Buffalo");
+        const span1 = document.createElement("span");
+        const span2 = document.createElement("span");
+        const span3 = document.createElement("span");
+        const span4 = document.createElement("span");
+        span1.appendChild(li1Text);
+        span2.appendChild(li2Text);
+        span3.appendChild(li3Text);
+        span4.appendChild(li4Text);
+        li1.appendChild(span1);
+        li2.appendChild(span2);
+        li3.appendChild(span3);
+        li4.appendChild(span4);
+
+        span1.onclick = () => {
+            imgURL = "https://ichef.bbci.co.uk/images/ic/1920x1080/p05lqc4f.jpg";
+            pic.src = imgURL;
+        }
+        span2.onclick = () => {
+            imgURL = "https://m.media-amazon.com/images/I/713XPo-M9sL.jpg";
+            pic.src = imgURL;
+        }
+        span3.onclick = () => {
+            imgURL = "https://yanivshoval.files.wordpress.com/2015/05/action-istock_000018662891small.jpg";
+            pic.src = imgURL;
+        }
+        span4.onclick = () => {
+            imgURL = "https://i.natgeofe.com/n/de7be89d-3715-4e89-b83b-ab697ef781b8/thumbnail-cape-buffalo-nationalgeographic_1976203_3x2.jpg";
+            pic.src = imgURL;
+        }
+
+        subContainer1.appendChild(li1);
+        subContainer1.appendChild(li2);
+        subContainer1.appendChild(li3);
+        subContainer1.appendChild(li4);
+
+        container4.appendChild(header2);
+        container4.appendChild(subContainer1);
+        //container 4 - END
+
+        //picture
+        const pic = document.createElement("img");
+        let imgURL = "https://ev.runlah.com/api/1/images/e-P9CHfLTECN--banner.jpg?size=xl"
+        pic.src = imgURL;
+        //picture - END
+
+        //style
+        container1.style.padding = "1%";
+        container2.style.padding = "1%";
+        container3.style.padding = "1%";
+        container4.style.padding = "1%";
+        subContainer.style.textIndent = "2%";
+        subContainer1.style.textIndent = "2%";
+        span1.style.textDecoration = "underline";
+        span1.style.color = "blue";
+        span1.style.cursor = "pointer";
+        span2.style.textDecoration = "underline";
+        span2.style.color = "blue";
+        span2.style.cursor = "pointer";
+        span3.style.textDecoration = "underline";
+        span3.style.color = "blue";
+        span3.style.cursor = "pointer";
+        span4.style.textDecoration = "underline";
+        span4.style.color = "blue";
+        span4.style.cursor = "pointer";
+        subContainer.style.display = "None";
+        personalInfo.style.cursor = "pointer"
+        button.style.cursor = "pointer"
+        pic.style.maxWidth = "500px";
+        pic.style.padding = "1%";
+        //style - END
+
+        all.appendChild(container1);
+        all.appendChild(container2);
+        all.appendChild(container3);
+        all.appendChild(container4);
+        all.appendChild(pic);
+    </script>
+</body>
+
+</html>
