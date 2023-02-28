@@ -1,0 +1,75 @@
+.App {
+  text-align: center;
+  background-color: dimgrey;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Header {
+  color: gold;
+  padding: 2%;
+  margin: 0;
+}
+
+.votebox {
+  background-color: bisque;
+  border: 3px solid black;
+  border-radius: 25px;
+  width: 50%;
+}
+.container {
+  padding: 3%;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  max-width: 70%;
+  text-align: start;
+}
+
+.pic {
+  max-width: 30%; 
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+button {
+  height: 35px;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.voteFrame {
+  height: 50px;
+  width: 70px;
+  background-color: Chartreuse;
+  border: 3px solid black;
+  border-radius: 15px;
+  margin: 2%;
+}
+
+.voteFrame>p{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: BlueViolet;
+  font-weight: bolder;
+  font-size: 18px;
+  height: 100%;
+  margin: 0;
+}
